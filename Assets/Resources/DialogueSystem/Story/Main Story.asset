@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121deabd8a2440a43a5fc0a6dbad6ec1, type: 3}
+  m_Name: Main Story
+  m_EditorClassIdentifier: 
+  path: DialogueSystem/Story/Main Story.asset
+  NodeLinks:
+  - BaseNodeGUID: 52c64a25-52b2-4177-95c0-f745d4778a64
+    PortName: Next
+    TargetNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+  - BaseNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+    PortName: Option 1
+    TargetNodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
+  - BaseNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+    PortName: Option 2
+    TargetNodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
+  - BaseNodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
+    PortName: Option 1
+    TargetNodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
+  - BaseNodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
+    PortName: Option 1
+    TargetNodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
+  - BaseNodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
+    PortName: Option 1
+    TargetNodeGUID: 5389243d-2df1-4ab5-890b-1cfc2d35c1f0
+  - BaseNodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
+    PortName: Option 1
+    TargetNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
+  - BaseNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
+    PortName: Option 1
+    TargetNodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
+  - BaseNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
+    PortName: Option 2
+    TargetNodeGUID: e005c59b-99b5-49ce-a58b-b8f5bf468001
+  - BaseNodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
+    PortName: Option 1
+    TargetNodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
+  - BaseNodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
+    PortName: Option 1
+    TargetNodeGUID: 0cb8babf-36d5-454a-b37d-384bd694922a
+  StoryNodeData:
+  - NodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+    dialogueName: Intro
+    path: DialogueSystem/Dialogue/Intro.asset
+    Position: {x: 231, y: 200}
+  - NodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
+    dialogueName: IntroKejar
+    path: DialogueSystem/Dialogue/IntroKejar.asset
+    Position: {x: 464, y: 150}
+  - NodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
+    dialogueName: IntroPulang
+    path: DialogueSystem/Dialogue/IntroPulang.asset
+    Position: {x: 464, y: 277}
+  - NodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
+    dialogueName: ArtefactExplanation
+    path: DialogueSystem/Dialogue/ArtefactExplanation.asset
+    Position: {x: 749, y: 150}
+  - NodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
+    dialogueName: ArtefactExplanation
+    path: DialogueSystem/Dialogue/ArtefactExplanation.asset
+    Position: {x: 749, y: 277}
+  - NodeGUID: 5389243d-2df1-4ab5-890b-1cfc2d35c1f0
+    dialogueName: ChaosRaising
+    path: DialogueSystem/Dialogue/ChaosRaising.asset
+    Position: {x: 1078, y: 277}
+  - NodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
+    dialogueName: CorruptedArtefact
+    path: DialogueSystem/Dialogue/CorruptedArtefact.asset
+    Position: {x: 1078, y: 100}
+  - NodeGUID: e005c59b-99b5-49ce-a58b-b8f5bf468001
+    dialogueName: CorruptedArtefactLeave
+    path: DialogueSystem/Dialogue/CorruptedArtefactLeave.asset
+    Position: {x: 1356, y: 176}
+  - NodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
+    dialogueName: CorruptedArtefactInvestigate
+    path: DialogueSystem/Dialogue/CorruptedArtefactInvestigate.asset
+    Position: {x: 1356, y: 29}
+  - NodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
+    dialogueName: MeetTheCorrupted
+    path: DialogueSystem/Dialogue/MeetTheCorrupted.asset
+    Position: {x: 1709, y: 29}
+  - NodeGUID: 0cb8babf-36d5-454a-b37d-384bd694922a
+    dialogueName: CorruptedExplanation
+    path: DialogueSystem/Dialogue/CorruptedExplanation.asset
+    Position: {x: 2032, y: 29}
+  ExposedProperties: []
+  CommentBlockData: []

@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class IdleState : State
 {
-    public override void EnterHandleState()
-    {
 
+    public IdleState(Action enterAction, Action updateAction, Action exitAction, List<State> states)
+    { 
+        actionMethod[0] = enterAction;
+        actionMethod[1] = updateAction;
+        actionMethod[2] = exitAction;
+        stateMachineStates = states;
     }
 
-    public override void InputHandleState()
+    public override void EnterHandleState()
     {
-        base.InputHandleState();
+        base.EnterHandleState();
+    }
+
+    public override State InputHandleState(State previousState)
+    {
+        State next = stateMachineStates[(int)PlayerEnumState.Move].InputHandleState(this);
+        onStateChange(this, next);
+        return next;
     }
 
     public override void UpdateHandleState()

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: 
+  path: 
+  NodeLinks:
+  - BaseNodeGUID: 1e1e5dc6-5fc3-4341-b962-54cc6b34df02
+    PortName: Next
+    TargetNodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
+  - BaseNodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
+    PortName: Option 1
+    TargetNodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
+  - BaseNodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
+    PortName: Option 1
+    TargetNodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
+  - BaseNodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
+    PortName: Option 1
+    TargetNodeGUID: abcf7a23-76d2-4dc8-b051-98851589bbae
+  DialogueNodeData:
+  - NodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
+    DialogueText: hey tunggu! /n jangan lari!
+    Position: {x: 210, y: 200}
+  - NodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
+    DialogueText: aaaaaaaAAAAAAAA /n Jangan Mendekat
+    Position: {x: 517, y: 200}
+  - NodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
+    DialogueText: ....
+    Position: {x: 934, y: 200}
+  - NodeGUID: abcf7a23-76d2-4dc8-b051-98851589bbae
+    DialogueText: perasaan ini! /n aku sangat yakin dia pasti artefak
+    Position: {x: 1132, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []
