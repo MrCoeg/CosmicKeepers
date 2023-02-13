@@ -39,6 +39,12 @@ My Feature
 
 ![DialogueGraph](/Assets/Readme/Dialogue%20Graph.png)
 
+## Parallax
+Saya membuat 2d parallax dengan menggunakan z-index dari sprite yang digunakan kemudian melakukan operasi matematik terhadap perubahan transform.position dari camera
+
+Click here to go - [Parallax](/Assets/Scripts/Scene/Parallax.cs)
+
+![Parallax](/Assets/Readme/Parallax.png)
 ## Emotions
 
 <img src="./Assets/Resources/Emotions/Flat.png" 
