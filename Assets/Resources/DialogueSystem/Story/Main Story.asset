@@ -12,85 +12,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121deabd8a2440a43a5fc0a6dbad6ec1, type: 3}
   m_Name: Main Story
   m_EditorClassIdentifier: 
-  path: DialogueSystem/Story/Main Story.asset
+  path: 
   NodeLinks:
-  - BaseNodeGUID: 52c64a25-52b2-4177-95c0-f745d4778a64
+  - BaseNodeGUID: f4d3ee76-ed2f-401b-bf32-a5c1a8c9a651
     PortName: Next
-    TargetNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
-  - BaseNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+    TargetNodeGUID: 6184cee7-7bf4-41dc-9232-c25529ebfc33
+  - BaseNodeGUID: 6184cee7-7bf4-41dc-9232-c25529ebfc33
     PortName: Option 1
-    TargetNodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
-  - BaseNodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+    TargetNodeGUID: a267c9c6-345f-47f4-ac13-04b2d0f6f318
+  - BaseNodeGUID: a267c9c6-345f-47f4-ac13-04b2d0f6f318
+    PortName: Option 1
+    TargetNodeGUID: 67677404-be38-4ec7-a8dc-63e53e9ac705
+  - BaseNodeGUID: 67677404-be38-4ec7-a8dc-63e53e9ac705
+    PortName: Option 1
+    TargetNodeGUID: dcd75696-f1a6-427b-a180-4f1c07e8b615
+  - BaseNodeGUID: 67677404-be38-4ec7-a8dc-63e53e9ac705
     PortName: Option 2
-    TargetNodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
-  - BaseNodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
-    PortName: Option 1
-    TargetNodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
-  - BaseNodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
-    PortName: Option 1
-    TargetNodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
-  - BaseNodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
-    PortName: Option 1
-    TargetNodeGUID: 5389243d-2df1-4ab5-890b-1cfc2d35c1f0
-  - BaseNodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
-    PortName: Option 1
-    TargetNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
-  - BaseNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
-    PortName: Option 1
-    TargetNodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
-  - BaseNodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
+    TargetNodeGUID: bf1f1910-8ecc-4e5d-9953-e89e002c9216
+  - BaseNodeGUID: bf1f1910-8ecc-4e5d-9953-e89e002c9216
     PortName: Option 2
-    TargetNodeGUID: e005c59b-99b5-49ce-a58b-b8f5bf468001
-  - BaseNodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
+    TargetNodeGUID: 1675fd42-2e76-460b-ad3b-f3397c39e061
+  - BaseNodeGUID: bf1f1910-8ecc-4e5d-9953-e89e002c9216
     PortName: Option 1
-    TargetNodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
-  - BaseNodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
+    TargetNodeGUID: 13a72d4d-dbab-4baf-a28e-be39e760eeb4
+  - BaseNodeGUID: 1675fd42-2e76-460b-ad3b-f3397c39e061
     PortName: Option 1
-    TargetNodeGUID: 0cb8babf-36d5-454a-b37d-384bd694922a
+    TargetNodeGUID: 7f0cce75-0747-46da-b65f-a2fb8f4079f1
+  - BaseNodeGUID: 7f0cce75-0747-46da-b65f-a2fb8f4079f1
+    PortName: Option 1
+    TargetNodeGUID: 0c578c88-938a-4a4f-a8c7-1ea81399135e
+  - BaseNodeGUID: 0c578c88-938a-4a4f-a8c7-1ea81399135e
+    PortName: Option 1
+    TargetNodeGUID: dddb55de-c68f-4e7e-9195-4aefea6dd2da
+  - BaseNodeGUID: dcd75696-f1a6-427b-a180-4f1c07e8b615
+    PortName: Option 1
+    TargetNodeGUID: ec38c939-ac4c-4558-b398-c79a517f306f
+  - BaseNodeGUID: ec38c939-ac4c-4558-b398-c79a517f306f
+    PortName: Option 1
+    TargetNodeGUID: 56bed7c6-17d4-406d-a202-9a9b5dde7c03
+  - BaseNodeGUID: 56bed7c6-17d4-406d-a202-9a9b5dde7c03
+    PortName: Option 1
+    TargetNodeGUID: d0b39728-630e-4544-94fc-516dc658e9b6
   StoryNodeData:
-  - NodeGUID: b27c45e1-8aba-4dc0-a0d4-6ac9fdcccc7e
+  - NodeGUID: 6184cee7-7bf4-41dc-9232-c25529ebfc33
     dialogueName: Intro
     path: DialogueSystem/Dialogue/Intro.asset
-    Position: {x: 231, y: 200}
-  - NodeGUID: 797852ea-1d4a-4b9d-a8c4-d7734eba306d
-    dialogueName: IntroKejar
-    path: DialogueSystem/Dialogue/IntroKejar.asset
-    Position: {x: 464, y: 150}
-  - NodeGUID: 4340dade-0990-4a4d-847b-6dde200a81a4
-    dialogueName: IntroPulang
-    path: DialogueSystem/Dialogue/IntroPulang.asset
-    Position: {x: 464, y: 277}
-  - NodeGUID: 34be7ad2-4456-4b0f-a82b-b8d05fd4634d
-    dialogueName: ArtefactExplanation
-    path: DialogueSystem/Dialogue/ArtefactExplanation.asset
-    Position: {x: 749, y: 150}
-  - NodeGUID: 6a1bc3b9-508f-4227-a41b-32175ff6d790
-    dialogueName: ArtefactExplanation
-    path: DialogueSystem/Dialogue/ArtefactExplanation.asset
-    Position: {x: 749, y: 277}
-  - NodeGUID: 5389243d-2df1-4ab5-890b-1cfc2d35c1f0
-    dialogueName: ChaosRaising
-    path: DialogueSystem/Dialogue/ChaosRaising.asset
-    Position: {x: 1078, y: 277}
-  - NodeGUID: 3702866d-590b-4d78-b0aa-0bef0084eddb
-    dialogueName: CorruptedArtefact
-    path: DialogueSystem/Dialogue/CorruptedArtefact.asset
-    Position: {x: 1078, y: 100}
-  - NodeGUID: e005c59b-99b5-49ce-a58b-b8f5bf468001
-    dialogueName: CorruptedArtefactLeave
-    path: DialogueSystem/Dialogue/CorruptedArtefactLeave.asset
-    Position: {x: 1356, y: 176}
-  - NodeGUID: affac1d1-3adc-4af8-9683-a86eecc83949
-    dialogueName: CorruptedArtefactInvestigate
-    path: DialogueSystem/Dialogue/CorruptedArtefactInvestigate.asset
-    Position: {x: 1356, y: 29}
-  - NodeGUID: 4190666f-fe69-47d3-84df-65c44e39bdce
-    dialogueName: MeetTheCorrupted
-    path: DialogueSystem/Dialogue/MeetTheCorrupted.asset
-    Position: {x: 1709, y: 29}
-  - NodeGUID: 0cb8babf-36d5-454a-b37d-384bd694922a
-    dialogueName: CorruptedExplanation
-    path: DialogueSystem/Dialogue/CorruptedExplanation.asset
-    Position: {x: 2032, y: 29}
+    Position: {x: 252, y: 200}
+  - NodeGUID: 67677404-be38-4ec7-a8dc-63e53e9ac705
+    dialogueName: Find The Keys
+    path: DialogueSystem/Dialogue/Find The Keys.asset
+    Position: {x: 742, y: 200}
+  - NodeGUID: a267c9c6-345f-47f4-ac13-04b2d0f6f318
+    dialogueName: Arriving
+    path: DialogueSystem/Dialogue/Arriving.asset
+    Position: {x: 516, y: 200}
+  - NodeGUID: bf1f1910-8ecc-4e5d-9953-e89e002c9216
+    dialogueName: Keep Search
+    path: DialogueSystem/Dialogue/Keep Search.asset
+    Position: {x: 995, y: 275}
+  - NodeGUID: 13a72d4d-dbab-4baf-a28e-be39e760eeb4
+    dialogueName: Have Find The Keys
+    path: DialogueSystem/Dialogue/Have Find The Keys.asset
+    Position: {x: 1229, y: 233}
+  - NodeGUID: 1675fd42-2e76-460b-ad3b-f3397c39e061
+    dialogueName: Not Find The Keys
+    path: DialogueSystem/Dialogue/Not Find The Keys.asset
+    Position: {x: 1229, y: 361}
+  - NodeGUID: 7f0cce75-0747-46da-b65f-a2fb8f4079f1
+    dialogueName: Disasters
+    path: DialogueSystem/Dialogue/Disasters.asset
+    Position: {x: 1500, y: 361}
+  - NodeGUID: 0c578c88-938a-4a4f-a8c7-1ea81399135e
+    dialogueName: Bad Ending
+    path: DialogueSystem/Dialogue/Bad Ending.asset
+    Position: {x: 1719, y: 361}
+  - NodeGUID: dddb55de-c68f-4e7e-9195-4aefea6dd2da
+    dialogueName: Die
+    path: DialogueSystem/Dialogue/Die.asset
+    Position: {x: 1975, y: 361}
+  - NodeGUID: dcd75696-f1a6-427b-a180-4f1c07e8b615
+    dialogueName: GoHome
+    path: DialogueSystem/Dialogue/GoHome.asset
+    Position: {x: 995, y: 120}
+  - NodeGUID: ec38c939-ac4c-4558-b398-c79a517f306f
+    dialogueName: Disasters
+    path: DialogueSystem/Dialogue/Disasters.asset
+    Position: {x: 1229, y: 39}
+  - NodeGUID: 56bed7c6-17d4-406d-a202-9a9b5dde7c03
+    dialogueName: Bad Ending
+    path: DialogueSystem/Dialogue/Bad Ending.asset
+    Position: {x: 1439, y: 39}
+  - NodeGUID: d0b39728-630e-4544-94fc-516dc658e9b6
+    dialogueName: Die
+    path: DialogueSystem/Dialogue/Die.asset
+    Position: {x: 1663, y: 39}
   ExposedProperties: []
   CommentBlockData: []

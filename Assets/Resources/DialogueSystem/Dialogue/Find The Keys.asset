@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Find The Keys
+  m_EditorClassIdentifier: 
+  path: Assets/Resources/DialogueSystem/Dialogue/Find The Keys.asset
+  NodeLinks:
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
+    PortName: Next
+    TargetNodeGUID: 485c93c2-46a3-4516-8131-d68a827fa99f
+  - BaseNodeGUID: 485c93c2-46a3-4516-8131-d68a827fa99f
+    PortName: Option 1
+    TargetNodeGUID: 2e8f7661-a0c6-4c23-887f-acb68b2d13e9
+  - BaseNodeGUID: 2e8f7661-a0c6-4c23-887f-acb68b2d13e9
+    PortName: Option 1
+    TargetNodeGUID: 09e9d5db-3b7f-42a9-b99f-855c42bfb658
+  DialogueNodeData:
+  - NodeGUID: 2e8f7661-a0c6-4c23-887f-acb68b2d13e9
+    DialogueText: Kalau tidak salah aku tadi sempat melewati beberapa patung, atau
+      hanya perasaanku saja ya
+    Position: {x: 984, y: 200}
+  - NodeGUID: 485c93c2-46a3-4516-8131-d68a827fa99f
+    DialogueText: Seharusnya disekitar sini ada patung atau sejenisnya untuk menuju
+      pusat trauma dari cosmic ini
+    Position: {x: 245, y: 200}
+  - NodeGUID: 09e9d5db-3b7f-42a9-b99f-855c42bfb658
+    DialogueText: Atau cosmic ini memang tidak punya trauma!, aduh aku bimbang
+    Position: {x: 1695, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []

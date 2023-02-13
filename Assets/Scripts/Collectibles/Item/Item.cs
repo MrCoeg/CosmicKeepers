@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Subtegral.DialogueSystem.DataContainers;
 
-public abstract class Item : Collectible
+public class Item : Collectible
 {
-    private StoryContainer story; 
-
-    public virtual void Use()
+    public void Use()
     {
-
+        effect();
     }
 
-    public override Collectible Create(CollectibleId id)
+    public Item Create(ItemId id)
     {
-        Item item;
-        string path = "DialogueSystem/Dialogue/";
+        var item = ScriptableObject.CreateInstance<Item>();
         switch (id) 
         {
-            case CollectibleId.Stars:
-                item = ScriptableObject.CreateInstance<Item>();
-                Debug.Log(path + id.ToString());
-                story = Resources.Load<StoryContainer>(path+id.ToString());
+            case ItemId.Cosmic:
+                item.name = "Cosmic";
+                item.icon = Resources.Load<Sprite>("Icon_Cosmic");
+                item.effect = () => {
+                    var healthStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+                    Debug.Log(item.name);
+                };
+                return item;
+            case ItemId.ArtefactFragment:
+                item.name = "Artefact Fragment";
+                item.icon = Resources.Load<Sprite>("Icon_Fragment");
+                item.effect = () =>
+                {
+                    Debug.Log(item.name);
+                };
                 return item;
         }
         return null;

@@ -1,22 +1,28 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Collectible : ScriptableObject
 {
-    public virtual Collectible Take()  
-    {
-        return this;
-    }
+    
+    public delegate void CollectibleEffect();
+    public CollectibleEffect effect;
+    public Sprite icon;
 
-    public virtual Collectible Create(CollectibleId id)
+    public virtual Collectible Take()  
     {
         return this;
     }
 }
 
-public enum CollectibleId
+public enum ItemId
 {
-    Stars
+    ArtefactFragment,
+    Cosmic,
+}
+
+public enum WeaponId
+{
+    Bow,
+    Arrow,
 }

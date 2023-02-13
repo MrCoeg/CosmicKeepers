@@ -36,7 +36,6 @@ namespace Subtegral.DialogueSystem.Editor
         private void GenerateToolbar()
         {
             var toolbar = new Toolbar();
-
             var fileNameTextField = new TextField("File Name:");
             fileNameTextField.SetValueWithoutNotify(_fileName);
             fileNameTextField.MarkDirtyRepaint();

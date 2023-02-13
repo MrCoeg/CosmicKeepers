@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Die
+  m_EditorClassIdentifier: 
+  path: 
+  NodeLinks:
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
+    PortName: Next
+    TargetNodeGUID: ab9dfbf5-16ba-4514-942d-c4a18ee8c300
+  - BaseNodeGUID: ab9dfbf5-16ba-4514-942d-c4a18ee8c300
+    PortName: Option 1
+    TargetNodeGUID: 33cda2e9-0900-44f5-9515-d7ff7fde9974
+  - BaseNodeGUID: 33cda2e9-0900-44f5-9515-d7ff7fde9974
+    PortName: Option 1
+    TargetNodeGUID: 37773c63-0372-4a0e-a1d6-28d34046a6c9
+  DialogueNodeData:
+  - NodeGUID: ab9dfbf5-16ba-4514-942d-c4a18ee8c300
+    DialogueText: Cosmic murni ku sangat cepat terkuras di cosmic ini
+    Position: {x: 284, y: 200}
+  - NodeGUID: 33cda2e9-0900-44f5-9515-d7ff7fde9974
+    DialogueText: Sialan aku tak bisa teleportasi untuk pulang, Uhuk Uhuk Uhuk.......
+    Position: {x: 736, y: 200}
+  - NodeGUID: 37773c63-0372-4a0e-a1d6-28d34046a6c9
+    DialogueText: sepertinnya ini akhir bagiku
+    Position: {x: 1301, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []

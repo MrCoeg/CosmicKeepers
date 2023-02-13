@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class StateMachine : MonoBehaviour
 {
-    public State currentState { get; protected set; }
+    [SerializeField] protected State currentState;
+    [SerializeField] protected List<State> states = new List<State>();
 
-    protected void ChangeState(State newState)
+    protected void ChangeState(CharacterEnumState newState)
     {
-        currentState = newState;
+        currentState.ExitHandleState();
+        currentState = states.Find(x => x.stateName == newState);
+        currentState.EnterHandleState();
     }
 }

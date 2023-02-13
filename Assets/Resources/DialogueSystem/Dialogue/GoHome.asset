@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: GoHome
+  m_EditorClassIdentifier: 
+  path: Assets/Resources/DialogueSystem/Dialogue/GoHome.asset
+  NodeLinks:
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
+    PortName: Next
+    TargetNodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+  - BaseNodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+    PortName: Option 1
+    TargetNodeGUID: acb61067-a151-4f5c-b351-5bd96e35f306
+  DialogueNodeData:
+  - NodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+    DialogueText: Benar juga, manusia pemilik cosmic ini pasti pandai bersyukur
+    Position: {x: 216, y: 200}
+  - NodeGUID: acb61067-a151-4f5c-b351-5bd96e35f306
+    DialogueText: Sebaiknya aku pulang untuk bersiap menuju ke cosmic berikutnya
+    Position: {x: 782, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []

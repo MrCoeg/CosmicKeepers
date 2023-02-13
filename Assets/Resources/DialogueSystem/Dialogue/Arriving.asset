@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Arriving
+  m_EditorClassIdentifier: 
+  path: Assets/Resources/DialogueSystem/Dialogue/Arriving.asset
+  NodeLinks:
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
+    PortName: Next
+    TargetNodeGUID: a5b8671f-6ede-4f6f-9e76-80d9b2e0ab17
+  - BaseNodeGUID: a5b8671f-6ede-4f6f-9e76-80d9b2e0ab17
+    PortName: Option 1
+    TargetNodeGUID: 2c5db5b0-62d2-495e-bbfb-c08b70bf038d
+  - BaseNodeGUID: 2c5db5b0-62d2-495e-bbfb-c08b70bf038d
+    PortName: Option 1
+    TargetNodeGUID: 1f6484d8-a6cb-4c69-a870-3737367fb8f0
+  - BaseNodeGUID: 1f6484d8-a6cb-4c69-a870-3737367fb8f0
+    PortName: Option 1
+    TargetNodeGUID: 290f83d6-745a-4b8c-9a02-3310cf8dfee9
+  DialogueNodeData:
+  - NodeGUID: a5b8671f-6ede-4f6f-9e76-80d9b2e0ab17
+    DialogueText: command StopWalk|
+    Position: {x: 243, y: 200}
+  - NodeGUID: 2c5db5b0-62d2-495e-bbfb-c08b70bf038d
+    DialogueText: 'anak baru pasti akan mengira kalau cosmic ini dimiliki oleh manusia
+      yang menyukai kedamaian '
+    Position: {x: 549, y: 200}
+  - NodeGUID: 1f6484d8-a6cb-4c69-a870-3737367fb8f0
+    DialogueText: Ya memang benar sih, Namun dibalik cosmic yang menghangatkan itu
+      selalu beralaskan trauma yang mengerikan
+    Position: {x: 1285, y: 200}
+  - NodeGUID: 290f83d6-745a-4b8c-9a02-3310cf8dfee9
+    DialogueText: Dan ini adalah tugasku untuk mengakhiri ironi tersebut|command
+      findTheDarkness|activateintime  dialoguebox3
+    Position: {x: 2163, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []

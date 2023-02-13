@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class PlayerStateMachine : StateMachine
 {
-    List<State> states = new List<State>();
+    public bool isTalking;
 
-    public bool isDialog;
+    [SerializeField] private Weapon currentWeapon;
+    [SerializeField] private DialogLoader dialogue;
+    [SerializeField] public List<CorruptedStateMachine> corrupteds { get; private set; } = new List<CorruptedStateMachine>(); 
+    [SerializeField] public Health health { get; private set; }
 
+    [SerializeField] Inventory inventory;
+    [SerializeField] bool inventoryDisplayMode;
+    [SerializeField] CollectiblesGenerator generator;
+
+    private float x, y;
+    private Vector3 localScale;
+    private Vector2 direction;
+    private bool isFacingRight = true;
+    [SerializeField] private Vector2 speed;
+
+    bool stillAttacking;
+    bool continueAttack;
     private void Awake()
     {
-        states.Add(new IdleState(IdleEnter, IdleUpdate, IdleExit, states));
-        states.Add(new MoveState(MoveEnter, MoveUpdate, MoveExit, states));
-        states.Add(new DialogState(DialogEnter, DialogUpdate, DialogExit, states));
+        dialogue = GetComponent<DialogLoader>();
+
+        inventory = gameObject.AddComponent<Inventory>();
+        inventory.Initialize(GameObject.Find("Player Inventory"));
+        inventory.DisplayInventory(inventoryDisplayMode);
+
+        inventory.AddCollectible(ScriptableObject.CreateInstance<Item>().Create(ItemId.ArtefactFragment));
+
+        this.tag = "Player";
+        states.Add(new State(CharacterEnumState.Idle,IdleEnter, IdleInput, IdleUpdate, IdleExit));
+        states.Add(new State(CharacterEnumState.Move, MoveEnter, MoveInput, MoveUpdate, MoveExit));
+        states.Add(new State(CharacterEnumState.Dialogue, DialogEnter, () => { }, DialogUpdate, DialogExit));
+        states.Add(new State(CharacterEnumState.Looting, LootingEnter, LootingInput, LootingUpdate, LootingExit));
+
     }
 
     private void Start()
@@ -23,25 +49,98 @@ public class PlayerStateMachine : StateMachine
 
     private void Update()
     {
-        currentState = currentState.InputHandleState(states[0]);
+        currentState.InputHandleState();
         currentState.UpdateHandleState();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (generator != null) generator.DisplayInventory();
+        }
     }
+
+    #region StateInputCondition
+    private bool MoveState()
+    {
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+
+        if (x != 0 || y != 0)
+        {
+            ChangeState(CharacterEnumState.Move);
+            return true;
+        }
+        return false;
+    }
+
+    private bool DialogueState()
+    {
+        if (dialogue != null && Input.GetKeyDown(KeyCode.E)) 
+        {
+            ChangeState(CharacterEnumState.Dialogue);
+            return true; 
+        }
+        return false;
+    }
+
+    private bool LootingState()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (!inventoryDisplayMode)
+            {
+                ChangeState(CharacterEnumState.Looting);
+                return true;
+            }
+            else
+            {
+                ChangeState(CharacterEnumState.Idle);
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    #endregion
+
+    #region IdleState
+    private void IdleEnter()
+    {
+        Debug.Log("Character is Entering Idle State");
+    }
+    private void IdleInput()
+    {
+        if (LootingState()) return;
+        if (DialogueState()) return;
+        if (MoveState()) return;
+    }
+
+    private void IdleUpdate()
+    {
+        Debug.Log("Character is in Idle State");
+    }
+    private void IdleExit()
+    {
+        Debug.Log("Character is Exiting Idle State");
+    }
+    #endregion
 
     #region MoveState
     private void MoveEnter()
     {
         Debug.Log("Character is Entering Move State");
     }
-
-    private float x, y;
-    private Vector3 localScale;
-    private Vector2 direction;
-    private bool isFacingRight = true;
-    [SerializeField] private Vector2 speed;
+    private void MoveInput()
+    {
+        if (LootingState()) return;
+        if (DialogueState()) return;
+        if (MoveState()) return;
+        ChangeState(CharacterEnumState.Idle);
+    }
     private void MoveUpdate()
     {
-        x = Input.GetAxis("Horizontal") * speed.x;
-        y = Input.GetAxis("Vertical") * speed.y;
+        x *=  speed.x;
+        y *= speed.y;
         direction = new Vector2(x, y);
         localScale = transform.localScale;
 
@@ -64,32 +163,21 @@ public class PlayerStateMachine : StateMachine
     }
     #endregion
 
-    #region IdleState
-    private void IdleEnter()
-    {
-        Debug.Log("Character is Entering Idle State");
-    }
-
-    private void IdleUpdate()
-    {
-        Debug.Log("Character is in Idle State");
-    }
-    private void IdleExit()
-    {
-        Debug.Log("Character is Exiting Idle State");
-    }
-    #endregion
-
     #region DialogState
     private void DialogEnter()
     {
         Debug.Log("Character is Entering Dialog State");
     }
 
+    public void DialogInput(bool isDone)
+    {
+        if (isDone) ChangeState(CharacterEnumState.Idle);
+    }
+
     private void DialogUpdate()
     {
         Debug.Log("Character is in Dialog State");
-        if (isDialog)
+        if (isTalking)
         {
             Debug.Log("Done");
         }
@@ -100,8 +188,57 @@ public class PlayerStateMachine : StateMachine
         Debug.Log("Character is Exiting Dialog State");
     }
     #endregion
-}
 
-public enum PlayerEnumState{
-    Idle,Move
+    #region LootingState
+    private void LootingEnter()
+    {
+        inventoryDisplayMode = true;
+        inventory.DisplayInventory(inventoryDisplayMode);
+    }
+    private void LootingInput()
+    {
+        if (LootingState()) return;
+    }
+    private void LootingUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.A)) inventory.ChangeSlots(-1);
+        if (Input.GetKeyDown(KeyCode.D)) inventory.ChangeSlots(1);
+
+        if (Input.GetKeyDown(KeyCode.W)) inventory.ChangeSeeds(1);
+        if (Input.GetKeyDown(KeyCode.S)) inventory.ChangeSeeds(-1);
+
+        if (Input.GetKeyDown(KeyCode.E)) inventory.UseCollectible();
+    }
+    private void LootingExit()
+    {
+        inventoryDisplayMode = false;
+        inventory.DisplayInventory(inventoryDisplayMode);
+    }
+    #endregion
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Corrupted")
+        {
+            corrupteds.Add(collision.GetComponent<CorruptedStateMachine>());
+        }
+
+        if (collision.tag == "CollectibleGenerator")
+        {
+            generator = collision.GetComponent<CollectiblesGenerator>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Corrupted")
+        {
+            corrupteds.Remove(collision.GetComponent<CorruptedStateMachine>());
+        }
+        if (collision.tag == "CollectibleGenerator")
+        {
+            generator = null;
+        }
+    }
 }

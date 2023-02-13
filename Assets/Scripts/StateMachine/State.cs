@@ -1,12 +1,22 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class State
+[Serializable]
+public class State
 {
-    protected Action[] actionMethod = new Action[3];
-    protected List<State> stateMachineStates;
+    protected Action[] actionMethod = new Action[4];
+    public CharacterEnumState stateName { get; private set; }
     public delegate void Action();
+
+    public State(CharacterEnumState newStateName, Action enterAction, Action inputAction, Action updateAction, Action exitAction)
+    {
+        stateName = newStateName;
+        actionMethod[0] = enterAction;
+        actionMethod[1] = inputAction;
+        actionMethod[2] = updateAction;
+        actionMethod[3] = exitAction;
+    }
 
     protected void onStateChange(State oldState, State newState)
     {
@@ -15,23 +25,28 @@ public abstract class State
         newState.EnterHandleState();
     }
 
-    public virtual void EnterHandleState()
+    public void EnterHandleState()
     {
         actionMethod[0]?.Invoke();
     }
 
-    public virtual State InputHandleState(State previousState)
-    {
-        return this;
-    }
-
-    public virtual void UpdateHandleState()
+    public void InputHandleState()
     {
         actionMethod[1]?.Invoke();
     }
 
-    public virtual void ExitHandleState()
+    public void UpdateHandleState()
     {
         actionMethod[2]?.Invoke();
     }
+
+    public void ExitHandleState()
+    {
+        actionMethod[3]?.Invoke();
+    }
+}
+
+public enum CharacterEnumState
+{
+    Idle, Move, Dialogue, Attacking, Damaged, Looting
 }

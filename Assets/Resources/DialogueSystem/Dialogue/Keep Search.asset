@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Keep Search
+  m_EditorClassIdentifier: 
+  path: Assets/Resources/DialogueSystem/Dialogue/Keep Search.asset
+  NodeLinks:
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
+    PortName: Next
+    TargetNodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+  - BaseNodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+    PortName: Option 1
+    TargetNodeGUID: 02f4d358-03fe-48e3-a76b-ff5c17c3ab50
+  - BaseNodeGUID: 02f4d358-03fe-48e3-a76b-ff5c17c3ab50
+    PortName: Option 1
+    TargetNodeGUID: 527688c5-e9e1-497a-94d7-d2fa878b8ca7
+  DialogueNodeData:
+  - NodeGUID: a1384a83-a7ae-49b4-b58a-199ad06e3733
+    DialogueText: Tidak boleh, aku yakin setiap cosmic mempunyai traumanya masing
+      - masing
+    Position: {x: 216, y: 200}
+  - NodeGUID: 02f4d358-03fe-48e3-a76b-ff5c17c3ab50
+    DialogueText: aku hanya harus lebih teliti, mungkin saja para cosmictre melakukan
+      sesuatu ke patung tersebut
+    Position: {x: 893, y: 200}
+  - NodeGUID: 527688c5-e9e1-497a-94d7-d2fa878b8ca7
+    DialogueText: Dan juga aku harus cepat, cosmic murni ku sebentar lagi akan habis
+    Position: {x: 1635, y: 200}
+  ExposedProperties: []
+  CommentBlockData: []

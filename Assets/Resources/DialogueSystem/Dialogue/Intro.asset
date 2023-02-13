@@ -14,30 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: 
   NodeLinks:
-  - BaseNodeGUID: 1e1e5dc6-5fc3-4341-b962-54cc6b34df02
+  - BaseNodeGUID: 777f74e2-e093-4a21-aff5-f1a4c525fe4d
     PortName: Next
-    TargetNodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
-  - BaseNodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
-    PortName: Option 1
-    TargetNodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
-  - BaseNodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
-    PortName: Option 1
-    TargetNodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
-  - BaseNodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
-    PortName: Option 1
-    TargetNodeGUID: abcf7a23-76d2-4dc8-b051-98851589bbae
+    TargetNodeGUID: a5b8671f-6ede-4f6f-9e76-80d9b2e0ab17
   DialogueNodeData:
-  - NodeGUID: df228cca-8707-465d-b7e5-bcb0cb2670cf
-    DialogueText: hey tunggu! /n jangan lari!
-    Position: {x: 210, y: 200}
-  - NodeGUID: 194ac27d-b9a4-4b23-8405-24431b3aeb5c
-    DialogueText: aaaaaaaAAAAAAAA /n Jangan Mendekat
-    Position: {x: 517, y: 200}
-  - NodeGUID: fa2e032d-0fa4-44d1-a234-173ce0128393
-    DialogueText: ....
-    Position: {x: 934, y: 200}
-  - NodeGUID: abcf7a23-76d2-4dc8-b051-98851589bbae
-    DialogueText: perasaan ini! /n aku sangat yakin dia pasti artefak
-    Position: {x: 1132, y: 200}
+  - NodeGUID: a5b8671f-6ede-4f6f-9e76-80d9b2e0ab17
+    DialogueText: Dialogue Node
+    Position: {x: 219, y: 200}
   ExposedProperties: []
   CommentBlockData: []
